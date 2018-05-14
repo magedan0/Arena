@@ -1,0 +1,148 @@
+import java.util.*;
+public abstract class PLAYER
+{
+ //VARIABLES
+ private String pName;
+ private String clas;
+ private int hP;
+ private int sP;
+ private int[] abList = new int[4];
+ 
+ //CONSTRUCTORS
+ public PLAYER (String name, String classs, int hp, int sp)
+ {
+  pName = name;
+  clas = classs;
+  hP = hp;
+  sP = sp;
+  abList[0] = 0;
+  abList[1] = 0; 
+  abList[2] = 0; 
+  abList[3] = 0; 
+ }
+ public PLAYER ()
+ {
+  pName = "Nerevarine";
+  clas = "Adventurer";
+  hP = 100;
+  sP = 100;
+  abList[0] = 0;
+  abList[1] = 0; 
+  abList[2] = 0; 
+  abList[3] = 0; 
+ }
+ 
+ //GETTERS/SETTERS
+ //name
+ public void setName(String name)
+ {
+  pName = name; 
+ }
+ public String getName()
+ {
+  return pName;
+ }
+ //stats
+ public String getClas()
+ {
+  return clas; 
+ }
+ public void setHP(int hp)
+ {
+  hP = hp; 
+ }
+ public int getHP()
+ {
+  return hP; 
+ }
+ public void setSP(int sp)
+ {
+ sP = sp;  
+ }
+ public int getSP()
+ {
+  return sP; 
+ }
+ //abillities
+ public void setAb0(int ab0)
+ {
+  abList[0] = ab0; 
+ }
+ public int getAb0(int ab0)
+ {
+  return abList[0]; 
+ }
+ public void setAb1(int ab1)
+ {
+  abList[1] = ab1; 
+ }
+ public int getAb1(int ab1)
+ {
+  return abList[1]; 
+ }
+ public void setAb2(int ab2)
+ {
+  abList[2] = ab2; 
+ }
+ public int getAb2(int ab2)
+ {
+  return abList[2]; 
+ }
+ public void setAb3(int ab3)
+ {
+  abList[3] = ab3; 
+ }
+ public int getAb3(int ab3)
+ {
+  return abList[3]; 
+ }
+ 
+ //METHODS
+ public void printStat()
+ {
+  System.out.println("--------------------");
+  System.out.println("NAME: " + getName()); 
+  System.out.println("CLASS: " + getClas()); 
+  System.out.println("HP: " + getHP()); 
+  System.out.println("SP: " + getSP());  
+  System.out.println("--------------------"); 
+ }
+ 
+ public void printAbList()
+ {
+  System.out.println("--------------------"); 
+  if (abList[0] == 1)
+  {
+   System.out.println("SLOT 1: FIREBALL"); 
+  }
+  else
+  {
+   System.out.println("SLOT 1: NONE"); 
+  }
+  if (abList[1] == 1)
+  {
+   System.out.println("SLOT 2: HEAL");  
+  }
+  else
+  {
+   System.out.println("SLOT 2: NONE");  
+  }
+  if (abList[2] == 1)
+  {
+   System.out.println("SLOT 3: ICE WALL"); 
+  }
+  else
+  {
+   System.out.println("SLOT 3: NONE");  
+  }
+  if (abList[3] == 1)
+  {
+   System.out.println("SLOT 4: METEOR STRIKE"); 
+  }
+  else
+  {
+   System.out.println("SLOT 4: NONE");  
+  }
+  System.out.println("--------------------"); 
+ }
+}
